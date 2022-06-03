@@ -1,21 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package cardtrickice1;
 
-/** define card value and suits
- * 
+import java.util.Random;
+
+/**
+ * define card value and suits
+ *
  *
  * @author sivagamasrinivasan
+ * @author rana ibrahim 991655999, June 3rd
  */
-public class Card 
-{
+public class Card {
+
     private int value;
-    private String suits; //encapsulation
-    //constant
-    public static final String [] SUITS = { "diamonds","clubs","spades","hearts"};
+    private String suits;
+    public static final String[] SUITS = {"diamonds", "clubs", "spades", "hearts"};
 
     /**
      * @return the value
@@ -44,8 +42,22 @@ public class Card
     public void setSuits(String suits) {
         this.suits = suits;
     }
-   //number
-    
-    //method for suits
-    
+
+    /**
+     * @return the a random number between 1 - 13
+     */
+    public static int randomNumber() {
+        int randomNumber = 1 + (int) (Math.random() * ((13 - 1) + 1));
+        return randomNumber;
+    }
+
+    /**
+     * @return a random suit
+     */
+    public static String randomSuit() {
+        Random random = new Random();
+        int randomSuit = random.nextInt(SUITS.length);
+        return SUITS[randomSuit];
+    }
+
 }
