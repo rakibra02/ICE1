@@ -20,8 +20,8 @@ public class CardTrickICE1 {
         
         //create Card object
         Card luckyCard = new Card();
-        luckyCard.setValue = 7;
-        luckyCard.setSuits = "diamond";
+        luckyCard.setValue(7);
+        luckyCard.setSuits("diamond");
         
         //create random cards and print random cards
         Card[] magicHand = new Card[7];
