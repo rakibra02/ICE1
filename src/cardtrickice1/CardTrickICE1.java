@@ -17,7 +17,12 @@ public class CardTrickICE1 {
      */
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-
+        
+        //create Card object
+        Card luckyCard = new Card();
+        luckyCard.setValue = 7;
+        luckyCard.setSuits = "diamond";
+        
         //create random cards and print random cards
         Card[] magicHand = new Card[7];
         for (int i = 0; i < magicHand.length; i++) {
